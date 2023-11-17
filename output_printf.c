@@ -24,31 +24,7 @@ int _printf(const char *format, ...)
 		if (*format == '%' && *(format + 1) != '\0')
 		{
 			format++;
-			switch (*format)
-			{
-			case 'c':
-				putchar(va_arg(args, int));
-				count++;
-				break;
-			case 's':
-				str = va_arg(args, const char *);
-
-				while (*str)
-				{
-				putchar(*str++);
-				count++;
-				}
-				break;
-			case '%':
-				putchar('%');
-				count++;
-				break;
-			default:
-				putchar('%');
-				putchar(*format);
-				count += 2;
-				break;
-			}
+			FORMAT_SPECIFIER();
 		}
 
 		else
