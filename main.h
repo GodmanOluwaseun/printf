@@ -5,8 +5,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int _printf(const char *format, ...);
+
+/**
+ * FORMAT_SPECIFIER - Macro to handle format specifiers through switch cases.
+ */
 
 #define FORMAT_SPECIFIER() do { \
 	switch(*format){ \

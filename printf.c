@@ -5,7 +5,7 @@
  *
  * @format: String containing arguments.
  * @...: Ellipsis for unknown number of arguments.
- * Return: Number if char printed.
+ * Return: Number of characters printed.
  */
 
 int _printf(const char *format, ...)
