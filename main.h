@@ -32,6 +32,11 @@ int _printf(const char *format, ...);
 		putchar('%'); \
 		count++; \
 		break; \
+	case 'd': \
+	case 'i': \
+		putchar(va_arg(args, int)); \
+		count++;  \
+		break; \
 	default: \
 		putchar('%'); \
 		putchar(*format); \
