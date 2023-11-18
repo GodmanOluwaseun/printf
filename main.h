@@ -37,6 +37,10 @@ int _printf(const char *format, ...);
 		putchar(va_arg(args, int)); \
 		count++;  \
 		break; \
+	case 'b': \
+		print_binary(va_arg(args, unsigned int)); \
+		count++; \
+		break; \
 	default: \
 		putchar('%'); \
 		putchar(*format); \
