@@ -14,14 +14,16 @@ int _printf(const char *format, ...);
  */
 
 #define FORMAT_SPECIFIER() do { \
-	switch(*format){ \
+	switch (*format) \
+	{ \
 	case 'c': \
 		putchar(va_arg(args, int)); \
 		count++; \
 		break; \
 	case 's': \
 		str = va_arg(args, const char *); \
-		while (*str){ \
+		while (*str) \
+		{ \
 			putchar(*str++); \
 			count++; \
 		} \
