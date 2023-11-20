@@ -71,7 +71,7 @@ void print_binary(uint64_t num)
 		count++;  \
 		break; \
 	case 'b': \
-		print_binary(va_arg(args, unsigned int)); \
+		print_binary(va_arg(args, uint64_t)); \
 		count++; \
 		break; \
 	default: \
