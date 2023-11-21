@@ -36,6 +36,9 @@ void print_int(int num);
 		count++; \
 		break; \
 	case 'd': \
+		print_int(va_arg(args, int)); \
+		count++; \
+		break; \
 	case 'i': \
 		print_int(va_arg(args, int)); \
 		count++;  \
