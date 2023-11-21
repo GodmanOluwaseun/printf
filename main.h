@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...);
 void print_binary(uint64_t num);
-
+void print_int(int num);
 
 /**
  * FORMAT_SPECIFIER - Macro to handle format specifiers through switch cases.
@@ -37,11 +37,11 @@ void print_binary(uint64_t num);
 		break; \
 	case 'd': \
 	case 'i': \
-		putchar(va_arg(args, int)); \
+		print_int(va_arg(args, int)); \
 		count++;  \
 		break; \
 	case 'b': \
-		print_binary(va_arg(args, int)); \
+		print_binary(va_arg(args, uint64_t)); \
 		count++; \
 		break; \
 	default: \
