@@ -4,10 +4,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
-#include <stdint.h>
-#include <strings.h>
 
 /**
  * struct fmt - function to check for formats
@@ -37,7 +33,8 @@ int _printf(const char *format, ...);
 			str = va_arg(args, const char *);\
 			if (str == NULL)\
 			{ \
-				puts("NULL");\
+				puts("(null)");\
+				count += 6;\
 			} \
 			while (*str)\
 			{ \
