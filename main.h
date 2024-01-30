@@ -35,6 +35,10 @@ int _printf(const char *format, ...);
 			break;\
 		case 's':\
 			str = va_arg(args, const char *);\
+			if (str == NULL)\
+			{ \
+				puts(nil);\
+			} \
 			while (*str)\
 			{ \
 				putchar(*str++);\
