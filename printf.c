@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	int count = 0;
 	va_list args;
-	const char *str, *nil = "(nil)";
+	const char *str, *null = "(null)";
 
 	if (format == NULL)
 	return (0);
